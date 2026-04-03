@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher Portfolio (Advanced)</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #2d2d2d;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: white;
+      padding: 70px 20px 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Layout */
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, #4f46e5, transparent);
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    /* News */
+    .news-box {
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .news-box ul {
+      padding-left: 20px;
+    }
+
+    /* Publications */
+    .pub-item {
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pub-title {
+      font-weight: 700;
+    }
+
+    .highlight {
+      display: inline-block;
+      background: #fff3cd;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-top: 4px;
+    }
+
+    /* Experience */
+    .entry {
+      margin-bottom: 12px;
+    }
+
+    .entry-meta {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>あなたの名前</h1>
+  <p>Affiliation / Research Area</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#news">News</a>
+  <a href="#publications">Publications</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="card">
+    <p>研究者プロフィールを書く（分野・所属・興味など）</p>
+  </div>
+</section>
+
+<section id="news">
+  <h2>News</h2>
+  <div class="card news-box">
+    <ul>
+      <li><strong>2026</strong>: ○○論文採択</li>
+      <li><strong>2025</strong>: インターン開始</li>
+    </ul>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <div class="card">
+
+      <div class="pub-item">
+        <div class="pub-title">Paper Title</div>
+        著者, 会議, 年
+        <div class="highlight">Best Paper</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">Another Paper</div>
+        著者, Journal, 年
+      </div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+
+    <div class="entry">
+      <div class="entry-meta">2025 - Present</div>
+      Research Intern, Company
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">2023 - 2025</div>
+      University / Lab
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: your@email.com</p>
+    <p>GitHub: https://github.com/yourname</p>
+    <p>Google Scholar: link</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Your Name
+</footer>
+
+</body>
+</html>
