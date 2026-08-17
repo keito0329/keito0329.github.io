@@ -7,6 +7,7 @@ date: 2026-07-01
 venue_short: "SIGIR 2026"
 venue: "International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
 pages: "3894-3899"
+paperurl: "https://dl.acm.org/doi/epdf/10.1145/3805712.3809967"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"
 citation: 'Keito Kozaki, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama. (2026). &quot;Revisiting the Role of Learned Attention Weighting in SASRec.&quot; <i>Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)</i>, pp. 3894-3899.'
 ---
