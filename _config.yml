@@ -168,11 +168,9 @@ analytics:
   google:
     tracking_id          :
   goatcounter:
-    # TODO: after registering at https://www.goatcounter.com, put the code you
-    # chose here. It is the subdomain of your dashboard, so for
-    # https://example.goatcounter.com the value is "example".
+    # The subdomain of the dashboard: https://keito0329.goatcounter.com
     # Nothing is tracked and no script is loaded while this is blank.
-    code                 :
+    code                 : "keito0329"
 
 
 # Reading Files
