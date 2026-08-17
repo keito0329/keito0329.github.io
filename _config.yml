@@ -164,9 +164,15 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  "goatcounter" # false (default), "google", "google-universal", "google-analytics-4", "goatcounter", "custom"
   google:
     tracking_id          :
+  goatcounter:
+    # TODO: after registering at https://www.goatcounter.com, put the code you
+    # chose here. It is the subdomain of your dashboard, so for
+    # https://example.goatcounter.com the value is "example".
+    # Nothing is tracked and no script is loaded while this is blank.
+    code                 :
 
 
 # Reading Files

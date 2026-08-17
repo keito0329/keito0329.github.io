@@ -1,0 +1,17 @@
+{% comment %}
+  GoatCounter (https://www.goatcounter.com). Set the site code in _config.yml:
+
+    analytics:
+      provider   : "goatcounter"
+      goatcounter:
+        code     : "yourcode"      # the yourcode.goatcounter.com part
+
+  Nothing is emitted while the code is blank, so the site stays clean until an
+  account exists. The script does not count visits from localhost, so local
+  previews will not show up in the dashboard.
+{% endcomment %}
+
+{% if site.analytics.goatcounter.code %}
+<script data-goatcounter="https://{{ site.analytics.goatcounter.code }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{% endif %}
