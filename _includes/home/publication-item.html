@@ -1,0 +1,31 @@
+{% comment %}
+  Renders a single publication as a list item. Shared by the lists on the front
+  page and the CV (home/publication-list.html) and by the Publications page,
+  which groups by category, so all three stay identical.
+
+  The `authors` field is Markdown. A name wrapped in **bold** is rendered
+  underlined, marking a lead-authored paper.
+
+  Parameters:
+    publication - one entry of the _publications collection.
+    lang        - "ja" to label the links in Japanese, anything else English.
+
+  Usage: {% include home/publication-item.html publication=post lang="ja" %}
+{% endcomment %}
+
+{% include base_path %}
+
+{%- assign publication = include.publication %}
+<li>
+  <span class="pub-list__title">{{ publication.title }}</span>
+  {%- if publication.award %}<span class="pub-list__award">{{ publication.award }}</span>{% endif %}
+  {%- if publication.authors %}<span class="pub-list__authors">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}
+  <span class="pub-list__venue">{{ publication.venue }}{% if publication.pages %}, pp. {{ publication.pages }}{% endif %}{% if publication.date %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
+  <span class="pub-list__links">
+    <a href="{{ publication.url | prepend: base_path }}">{% if include.lang == 'ja' %}詳細{% else %}details{% endif %}</a>
+    {%- if publication.paperurl %}<a href="{{ publication.paperurl }}">{% if include.lang == 'ja' %}論文{% else %}paper{% endif %}</a>{% endif %}
+    {%- if publication.codeurl %}<a href="{{ publication.codeurl }}">{% if include.lang == 'ja' %}コード{% else %}code{% endif %}</a>{% endif %}
+    {%- if publication.slidesurl %}<a href="{{ publication.slidesurl }}">{% if include.lang == 'ja' %}スライド{% else %}slides{% endif %}</a>{% endif %}
+    {%- if publication.bibtexurl %}<a href="{{ publication.bibtexurl }}">bibtex</a>{% endif %}
+  </span>
+</li>
