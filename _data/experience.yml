@@ -10,8 +10,17 @@
 #   url     : optional link on the organisation name
 
 - period: "2026.04 - present"
-  role_en: "TODO: replace this example — Master's student"
-  role_ja: "TODO: この例を書き換えてください — 修士課程"
-  org_en: "Graduate School of Information Science and Technology, Hokkaido University"
-  org_ja: "北海道大学 大学院情報科学院"
-  url: "https://www.ist.hokudai.ac.jp/"
+  role_en: "Master's student"
+  role_ja: "修士課程"
+  org_en: "Media Dynamics Laboratory, Graduate School of Information Science and Technology, Hokkaido University"
+  org_ja: "北海道大学 大学院情報科学院 メディアダイナミクス研究室"
+  url: "https://www-lmd.ist.hokudai.ac.jp/"
+
+# TODO: the start year below is inferred from the School of Engineering Dean's
+# Award you received in March 2026. Correct it if you entered in another year,
+# and add the department name if you want it shown.
+- period: "2022.04 - 2026.03"
+  role_en: "B.Eng."
+  role_ja: "学士課程"
+  org_en: "School of Engineering, Hokkaido University"
+  org_ja: "北海道大学 工学部"

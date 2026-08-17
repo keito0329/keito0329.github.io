@@ -6,8 +6,8 @@ author_profile: false
 {% include base_path %}
 
 <!-- Japanese version of the front page. It reads the same data files as
-     _pages/about.md but uses their `ja` fields, so news and experience only
-     have to be written once. -->
+     _pages/about.md but uses their `ja` fields, so news, awards and experience
+     only have to be written once. -->
 
 <div class="home-intro">
   <div class="home-intro__photo">
@@ -19,16 +19,19 @@ author_profile: false
     <ul class="home-intro__links">
       {% if site.author.email %}<li><a href="mailto:{{ site.author.email }}">メール</a></li>{% endif %}
       {% if site.author.googlescholar %}<li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>{% endif %}
-      {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>{% endif %}
       {% if site.author.orcid %}<li><a href="{{ site.author.orcid }}">ORCID</a></li>{% endif %}
+      {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>{% endif %}
       {% if site.author.twitter %}<li><a href="https://x.com/{{ site.author.twitter }}">X</a></li>{% endif %}
+      {% if site.author.linkedin %}<li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>{% endif %}
       <li><a href="{{ base_path }}/cv/">CV</a></li>
       <li><a href="{{ base_path }}/">English</a></li>
     </ul>
   </div>
 </div>
 
-TODO: 自己紹介を2〜3文で書いてください。英語版と同じ内容の日本語訳で構いません。
+北海道大学 大学院情報科学院 メディアダイナミクス研究室の修士課程に在籍しています。
+推薦システム、特にモデル内部やデータセットの解釈に興味があります。
+また近年は人を模倣したデジタルツインの研究にも興味があります。
 
 <div class="home-section" id="news">
   <h2 class="home-section__title">お知らせ<span class="home-section__hint">scroll &darr;</span></h2>
@@ -47,7 +50,7 @@ TODO: 自己紹介を2〜3文で書いてください。英語版と同じ内容
   <h2 class="home-section__title">業績</h2>
   {%- assign publications = site.publications | sort: 'date' | reverse -%}
   {%- if publications.size == 0 %}
-  <p>TODO: <code>_publications/</code> に論文ごとの Markdown ファイルを追加すると、ここと
+  <p><code>_publications/</code> に論文ごとの Markdown ファイルを追加すると、ここと
   <a href="{{ base_path }}/publications/">Publications</a> ページの両方に表示されます。</p>
   {%- else %}
   <ol class="pub-list">
@@ -55,6 +58,7 @@ TODO: 自己紹介を2〜3文で書いてください。英語版と同じ内容
     <li>
       <span class="pub-list__title">{{ publication.title }}</span>
       {%- if publication.award %}<span class="pub-list__award">{{ publication.award }}</span>{% endif %}
+      {%- if publication.authors %}<span class="pub-list__authors">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}
       <span class="pub-list__venue">{{ publication.venue }}{% if publication.date %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
       <span class="pub-list__links">
         <a href="{{ publication.url | prepend: base_path }}">詳細</a>
@@ -67,6 +71,19 @@ TODO: 自己紹介を2〜3文で書いてください。英語版と同じ内容
     {%- endfor %}
   </ol>
   {%- endif %}
+</div>
+
+<div class="home-section" id="awards">
+  <h2 class="home-section__title">受賞</h2>
+  <ul class="award-list">
+    {%- assign awards = site.data.awards | sort: 'date' | reverse -%}
+    {%- for award in awards %}
+    <li class="award-list__item">
+      <div class="award-list__date">{{ award.date | date: "%Y.%m" }}</div>
+      <div class="award-list__body">{{ award.ja | default: award.en }}</div>
+    </li>
+    {%- endfor %}
+  </ul>
 </div>
 
 <div class="home-section" id="experience">

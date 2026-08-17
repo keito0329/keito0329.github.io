@@ -133,8 +133,12 @@
   font-weight: bold;
 }
 
+.pub-list__authors,
 .pub-list__venue {
   display: block;
+}
+
+.pub-list__venue {
   color: var(--global-text-color-light);
 }
 
@@ -155,6 +159,44 @@
   a {
     margin-right: 0.7em;
   }
+}
+
+.pub-list__more {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+/*
+   Awards: date on the left, award on the right. Entries come from
+   _data/awards.yml.
+   ========================================================================== */
+
+.award-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.award-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1em 1em;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.award-list__date {
+  flex: 0 0 6em;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
+
+.award-list__body {
+  flex: 1 1 16em;
 }
 
 /*
@@ -205,6 +247,7 @@
   }
 
   .news-feed__date,
+  .award-list__date,
   .exp-list__period {
     flex: 0 0 100%;
     font-size: 0.85em;

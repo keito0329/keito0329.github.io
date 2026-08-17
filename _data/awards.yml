@@ -1,0 +1,26 @@
+# Awards shown in the "Awards" section of the front page.
+#
+# Sorted by `date` automatically, newest first, so new entries can be appended
+# anywhere in this file.
+#
+#   date : ISO date, used for sorting and displayed as YYYY.MM
+#   en   : text shown on /
+#   ja   : text shown on /ja/ (optional; falls back to `en` when omitted)
+
+# Entries sharing a date come out in reverse of the order written here, so the
+# DEIM award below is listed first in order to display it under the Dean's Award.
+- date: "2026-03-01"
+  en: "Student Presentation Award, DEIM2026"
+  ja: "DEIM2026 学生プレゼンテーション賞"
+
+- date: "2026-03-01"
+  en: "Dean's Award, School of Engineering, Hokkaido University"
+  ja: "北海道大学 工学部長賞"
+
+- date: "2025-11-01"
+  en: "Young Researcher Excellent Paper Presentation Award, Joint Conference of Hokkaido Chapters of Electrical and Information Institutes"
+  ja: "令和7年度 電気・情報関係学会北海道支部連合大会 若手優秀論文発表賞"
+
+- date: "2025-09-01"
+  en: "Excellent Paper Award, Silver Prize, IEEE GCCE 2025"
+  ja: "IEEE GCCE 2025 Excellent Paper Award, Silver Prize"
