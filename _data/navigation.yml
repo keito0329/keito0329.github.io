@@ -12,22 +12,22 @@ main:
     url: /publications/
 
   - title: "Talks"
-    url: /talks/    
+    url: /talks/
 
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
   - title: "CV"
     url: /cv/
-    
-  # - title: "CV"
+
+  # The following pages exist in the repository but are not linked in the
+  # header. Uncomment an entry to add it back to the navigation.
+  #
+  # - title: "Teaching"
+  #   url: /teaching/
+  #
+  # - title: "Portfolio"
+  #   url: /portfolio/
+  #
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+  #
+  # - title: "CV"          # JSON-driven CV, use instead of the Markdown one
   #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
