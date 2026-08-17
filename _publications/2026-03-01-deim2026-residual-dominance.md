@@ -2,8 +2,7 @@
 title: "因果的Self-Attentionを用いた逐次推薦モデルにおける残差支配がもたらす最終アイテム依存"
 collection: publications
 category: domestic
-# TODO: `date` is only used for ordering (the pages show the year), so adjust it
-# to the actual conference date if you want a different order.
+# `date` is only used for ordering; the pages display the year alone.
 date: 2026-03-01
 venue: "第18回データ工学と情報マネジメントに関するフォーラム (DEIM2026)"
 award: "学生プレゼンテーション賞"

@@ -8,8 +8,6 @@
 #   en   : text shown on /      (Markdown links are allowed)
 #   ja   : text shown on /ja/   (optional; falls back to `en` when omitted)
 
-# TODO: the months below are guesses at when the notifications arrived.
-# Correct them to the actual acceptance dates.
 - date: "2026-08-01"
   en: "\"Diagnosing Lexical Text-Anchor Retrievability in Sequential Recommendation Benchmarks\" was accepted at CIKM 2026."
   ja: "「Diagnosing Lexical Text-Anchor Retrievability in Sequential Recommendation Benchmarks」が CIKM 2026 に採択されました。"

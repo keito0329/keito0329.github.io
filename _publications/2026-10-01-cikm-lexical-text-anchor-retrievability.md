@@ -2,8 +2,7 @@
 title: "Diagnosing Lexical Text-Anchor Retrievability in Sequential Recommendation Benchmarks"
 collection: publications
 category: conferences
-# TODO: `date` is only used for ordering (the pages show the year), so adjust it
-# to the actual conference date if you want a different order.
+# `date` is only used for ordering; the pages display the year alone.
 date: 2026-10-01
 venue: "ACM International Conference on Information and Knowledge Management (CIKM)"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"

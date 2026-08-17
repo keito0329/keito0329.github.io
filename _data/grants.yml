@@ -6,8 +6,6 @@
 #   en     : name shown on /cv/
 #   ja     : name shown on /ja/ (falls back to `en`)
 
-# TODO: check the English name. This is written as the plain reading of
-# TCS奨学金; replace it with the foundation's own English name if it has one.
 - period: "2026.04 - present"
   en: "TCS Scholarship"
   ja: "TCS奨学金"

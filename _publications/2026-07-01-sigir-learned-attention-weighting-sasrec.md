@@ -2,8 +2,7 @@
 title: "Revisiting the Role of Learned Attention Weighting in SASRec"
 collection: publications
 category: conferences
-# TODO: `date` is only used for ordering (the pages show the year), so adjust it
-# to the actual conference date if you want a different order.
+# `date` is only used for ordering; the pages display the year alone.
 date: 2026-07-01
 venue: "International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
 pages: "3894-3899"

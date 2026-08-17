@@ -2,8 +2,7 @@
 title: "Explaining Last-Item Reliance in Causal Self-Attention for Sequential Recommendation via Residual Dominance"
 collection: publications
 category: conferences
-# TODO: `date` is only used for ordering (the pages show the year), so adjust it
-# to the actual conference date if you want a different order.
+# `date` is only used for ordering; the pages display the year alone.
 date: 2026-09-01
 venue: "ACM Conference on Recommender Systems (RecSys)"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"

@@ -2,8 +2,7 @@
 title: "SSM-Based Sequential Recommendation Considering Short-Term Dependencies of Time and Adjacency"
 collection: publications
 category: conferences
-# TODO: `date` is only used for ordering (the pages show the year), so adjust it
-# to the actual conference date if you want a different order.
+# `date` is only used for ordering; the pages display the year alone.
 date: 2025-09-01
 venue: "IEEE Global Conference on Consumer Electronics (GCCE)"
 pages: "1271-1274"

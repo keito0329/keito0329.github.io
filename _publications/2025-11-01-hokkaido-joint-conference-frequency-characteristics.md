@@ -2,8 +2,7 @@
 title: "ユーザ行動系列エンコーダの周波数特性を考慮した逐次推薦モデルに関する検討"
 collection: publications
 category: domestic
-# TODO: `date` is only used for ordering (the pages show the year), so adjust it
-# to the actual conference date if you want a different order.
+# `date` is only used for ordering; the pages display the year alone.
 date: 2025-11-01
 venue: "令和7年度 電気・情報関係学会北海道支部連合大会"
 pages: "37-38"
