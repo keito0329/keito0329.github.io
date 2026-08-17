@@ -28,7 +28,7 @@
   <span class="pub-list__venue">{{ publication.venue }}{% if publication.pages %}, pp. {{ publication.pages }}{% endif %}{% if publication.date %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
   <span class="pub-list__links">
     <a href="{{ publication.url | prepend: base_path }}">{% if include.lang == 'ja' %}詳細{% else %}details{% endif %}</a>
-    {%- if publication.paperurl %}<a href="{{ publication.paperurl }}">{% if include.lang == 'ja' %}論文{% else %}paper{% endif %}</a>{% endif %}
+    {%- if publication.paperurl %}<a href="{{ publication.paperurl }}">pdf</a>{% endif %}
     {%- if publication.codeurl %}<a href="{{ publication.codeurl }}">{% if include.lang == 'ja' %}コード{% else %}code{% endif %}</a>{% endif %}
     {%- if publication.slidesurl %}<a href="{{ publication.slidesurl }}">{% if include.lang == 'ja' %}スライド{% else %}slides{% endif %}</a>{% endif %}
     {%- if publication.bibtexurl %}<a href="{{ publication.bibtexurl }}">bibtex</a>{% endif %}

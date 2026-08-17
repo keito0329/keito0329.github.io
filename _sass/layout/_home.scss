@@ -187,11 +187,23 @@ $award-badge-color: #8a5a00;
   color: var(--global-text-color-light);
 }
 
+/* Links sit on their own line under the entry and are bracketed, so a reader
+   can reach the PDF from the list without opening the entry's own page. The
+   brackets are decorative, hence pseudo-elements rather than markup. */
 .pub-list__links {
+  display: block;
   font-size: 0.85em;
 
   a {
-    margin-right: 0.7em;
+    margin-right: 0.5em;
+
+    &::before {
+      content: "[";
+    }
+
+    &::after {
+      content: "]";
+    }
   }
 }
 
