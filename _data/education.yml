@@ -12,6 +12,7 @@
 #   note_en : optional second line, e.g. the laboratory
 #   note_ja : optional second line for /ja/ (falls back to note_en)
 #   url     : optional link on the institution name
+#   note_url: optional link on the note line
 
 - period: "2026.04 - present"
   role_en: "Master's programme in Information Science and Technology"
@@ -20,7 +21,7 @@
   org_ja: "北海道大学 大学院情報科学院"
   note_en: "Media Dynamics Laboratory"
   note_ja: "メディアダイナミクス研究室"
-  url: "https://www-lmd.ist.hokudai.ac.jp/"
+  note_url: "https://www-lmd.ist.hokudai.ac.jp/"
 
 - period: "2022.04 - 2026.03"
   role_en: "B.Eng."

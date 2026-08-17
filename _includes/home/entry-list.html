@@ -6,6 +6,10 @@
     entries - the data array to render, in the order written in the file.
     lang    - "ja" to use the `*_ja` fields, anything else uses the `*_en` ones.
 
+  Each entry may carry `url` to link its organisation and `note_url` to link
+  its note line, so the link can sit on whichever of the two names it belongs
+  to.
+
   Usage: {% include home/entry-list.html entries=site.data.education lang="ja" %}
 {% endcomment %}
 
@@ -26,7 +30,7 @@
       <div>{{ role }}</div>
       <div class="exp-list__org">{% if entry.url %}<a href="{{ entry.url }}">{{ org }}</a>{% else %}{{ org }}{% endif %}</div>
       {%- if note %}
-      <div class="exp-list__note">{{ note }}</div>
+      <div class="exp-list__note">{% if entry.note_url %}<a href="{{ entry.note_url }}">{{ note }}</a>{% else %}{{ note }}{% endif %}</div>
       {%- endif %}
     </div>
   </li>
