@@ -1,0 +1,17 @@
+# News shown in the "News" section of the front page.
+#
+# Entries are sorted by `date` automatically, newest first, so you can append
+# new items anywhere in this file. Use a full ISO date (YYYY-MM-DD) even when
+# only the month is displayed, otherwise sorting within a month is arbitrary.
+#
+#   date : ISO date, used for sorting and displayed as YYYY.MM
+#   en   : text shown on /      (Markdown links are allowed)
+#   ja   : text shown on /ja/   (optional; falls back to `en` when omitted)
+
+- date: "2026-04-01"
+  en: "TODO: replace this example. Started the master's programme at Hokkaido University."
+  ja: "TODO: この例を書き換えてください。北海道大学大学院に進学しました。"
+
+- date: "2026-03-01"
+  en: "TODO: an example with a link — [paper](https://example.org) accepted at Some Conference 2026."
+  ja: "TODO: リンクを含む例 — [論文](https://example.org)が Some Conference 2026 に採択されました。"

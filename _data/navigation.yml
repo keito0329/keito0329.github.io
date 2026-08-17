@@ -4,21 +4,36 @@
 # links. Removing a link prevents it from showing in the header, but does not
 # prevent it from being included in the site.
 #
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+# The front page currently collects News, Publications and Experience into a
+# single column, so those entries are anchors into it rather than separate
+# pages. When there is enough content to split them out, replace the anchors
+# with the page URLs commented out at the bottom of this file and set
+# `author_profile: true` in _pages/about.md to bring the sidebar back.
 
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "News"
+    url: /#news
 
-  - title: "Talks"
-    url: /talks/
+  - title: "Publications"
+    url: /#publications
+
+  - title: "Experience"
+    url: /#experience
 
   - title: "CV"
     url: /cv/
 
+  - title: "日本語"
+    url: /ja/
+
   # The following pages exist in the repository but are not linked in the
   # header. Uncomment an entry to add it back to the navigation.
+  #
+  # - title: "Publications"   # full list generated from _publications/
+  #   url: /publications/
+  #
+  # - title: "Talks"
+  #   url: /talks/
   #
   # - title: "Teaching"
   #   url: /teaching/
@@ -29,5 +44,5 @@ main:
   # - title: "Blog Posts"
   #   url: /year-archive/
   #
-  # - title: "CV"          # JSON-driven CV, use instead of the Markdown one
+  # - title: "CV"             # JSON-driven CV, use instead of the Markdown one
   #   url: /cv-json/

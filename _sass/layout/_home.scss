@@ -1,0 +1,212 @@
+/* ==========================================================================
+   HOME
+   Styles for the single-column front page rendered by _pages/about.md and
+   _pages/ja.md. Colours are taken from the theme's CSS custom properties so
+   these sections follow the light/dark theme like the rest of the site.
+   ========================================================================== */
+
+/*
+   Intro: portrait next to name, affiliation and contact links.
+   ========================================================================== */
+
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5em;
+  margin: 0 0 2.5em;
+}
+
+.home-intro__photo {
+  flex: 0 0 auto;
+  width: 180px;
+  max-width: 40%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
+.home-intro__body {
+  flex: 1 1 20em;
+}
+
+.home-intro__name {
+  margin: 0 0 0.15em;
+  font-size: 1.75em;
+  line-height: 1.2;
+}
+
+.home-intro__affiliation {
+  margin: 0 0 0.75em;
+  color: var(--global-text-color-light);
+}
+
+.home-intro__links {
+  margin: 0.75em 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1em;
+  font-size: 0.9em;
+
+  li {
+    margin: 0;
+  }
+}
+
+/*
+   Section headings shared by News / Publications / Experience.
+   ========================================================================== */
+
+.home-section {
+  margin-bottom: 2.5em;
+
+  /* Offset anchor targets so the sticky masthead does not cover the heading. */
+  scroll-margin-top: $masthead-height + 10px;
+}
+
+.home-section__title {
+  margin: 0 0 0.6em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.home-section__hint {
+  margin-left: 0.5em;
+  font-size: 0.6em;
+  font-weight: normal;
+  color: var(--global-text-color-light);
+}
+
+/*
+   News: a scrollable feed so a long history does not push the rest of the
+   page down. Entries come from _data/news.yml.
+   ========================================================================== */
+
+.news-feed {
+  max-height: 18em;
+  overflow-y: auto;
+  padding-right: 0.75em;
+}
+
+.news-feed__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1em 1em;
+  padding: 0.45em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.news-feed__date {
+  flex: 0 0 6em;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
+
+.news-feed__body {
+  flex: 1 1 16em;
+}
+
+/*
+   Publications: numbered list built from the _publications collection.
+   ========================================================================== */
+
+.pub-list {
+  margin: 0;
+  padding-left: 1.5em;
+
+  > li {
+    margin-bottom: 1em;
+  }
+}
+
+.pub-list__title {
+  font-weight: bold;
+}
+
+.pub-list__venue {
+  display: block;
+  color: var(--global-text-color-light);
+}
+
+.pub-list__award {
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.05em 0.5em;
+  border-radius: $border-radius;
+  background-color: var(--global-base-color);
+  color: #fff;
+  font-size: 0.75em;
+  vertical-align: middle;
+}
+
+.pub-list__links {
+  font-size: 0.85em;
+
+  a {
+    margin-right: 0.7em;
+  }
+}
+
+/*
+   Experience: period on the left, role and organisation on the right.
+   Entries come from _data/experience.yml.
+   ========================================================================== */
+
+.exp-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exp-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1em 1em;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.exp-list__period {
+  flex: 0 0 10em;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
+
+.exp-list__body {
+  flex: 1 1 16em;
+}
+
+.exp-list__org {
+  color: var(--global-text-color-light);
+}
+
+/*
+   Narrow screens: let the date and period columns run full width so the
+   text beside them is not squeezed into a narrow ribbon.
+   ========================================================================== */
+
+@include breakpoint(max-width $small) {
+  .home-intro {
+    gap: 1em;
+  }
+
+  .news-feed__date,
+  .exp-list__period {
+    flex: 0 0 100%;
+    font-size: 0.85em;
+  }
+}

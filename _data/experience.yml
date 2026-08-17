@@ -1,0 +1,17 @@
+# Entries shown in the "Experience" section of the front page.
+#
+# These are listed in the order written here, so keep the most recent first.
+#
+#   period  : free text, e.g. "2026.04 - present"
+#   role_en : position, shown on /
+#   role_ja : position, shown on /ja/ (optional; falls back to role_en)
+#   org_en  : organisation, shown on /
+#   org_ja  : organisation, shown on /ja/ (optional; falls back to org_en)
+#   url     : optional link on the organisation name
+
+- period: "2026.04 - present"
+  role_en: "TODO: replace this example — Master's student"
+  role_ja: "TODO: この例を書き換えてください — 修士課程"
+  org_en: "Graduate School of Information Science and Technology, Hokkaido University"
+  org_ja: "北海道大学 大学院情報科学院"
+  url: "https://www.ist.hokudai.ac.jp/"
