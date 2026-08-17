@@ -1,0 +1,48 @@
+{% comment %}
+  Renders the _publications collection as a numbered list, newest first.
+
+  Parameters:
+    lang     - "ja" to label the links in Japanese, anything else uses English.
+    domestic - true to include papers in the "domestic" category. When false
+               they are left out, which keeps the English front page readable.
+    more     - true to append a link to the full Publications page.
+
+  Usage: {% include home/publication-list.html lang="ja" domestic=true %}
+{% endcomment %}
+
+{% include base_path %}
+
+{%- if include.domestic -%}
+  {%- assign publications = site.publications | sort: 'date' | reverse -%}
+{%- else -%}
+  {%- assign publications = site.publications | where_exp: "item", "item.category != 'domestic'" | sort: 'date' | reverse -%}
+{%- endif -%}
+
+{%- if publications.size == 0 -%}
+  {%- if include.lang == 'ja' %}
+<p><code>_publications/</code> に論文ごとの Markdown ファイルを追加すると、ここに表示されます。</p>
+  {%- else %}
+<p>Add one Markdown file per paper under <code>_publications/</code> and it will appear here.</p>
+  {%- endif -%}
+{%- else -%}
+<ol class="pub-list">
+  {%- for publication in publications %}
+  <li>
+    <span class="pub-list__title">{{ publication.title }}</span>
+    {%- if publication.award %}<span class="pub-list__award">{{ publication.award }}</span>{% endif %}
+    {%- if publication.authors %}<span class="pub-list__authors">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}
+    <span class="pub-list__venue">{{ publication.venue }}{% if publication.pages %}, pp. {{ publication.pages }}{% endif %}{% if publication.date %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
+    <span class="pub-list__links">
+      <a href="{{ publication.url | prepend: base_path }}">{% if include.lang == 'ja' %}詳細{% else %}details{% endif %}</a>
+      {%- if publication.paperurl %}<a href="{{ publication.paperurl }}">{% if include.lang == 'ja' %}論文{% else %}paper{% endif %}</a>{% endif %}
+      {%- if publication.codeurl %}<a href="{{ publication.codeurl }}">{% if include.lang == 'ja' %}コード{% else %}code{% endif %}</a>{% endif %}
+      {%- if publication.slidesurl %}<a href="{{ publication.slidesurl }}">{% if include.lang == 'ja' %}スライド{% else %}slides{% endif %}</a>{% endif %}
+      {%- if publication.bibtexurl %}<a href="{{ publication.bibtexurl }}">bibtex</a>{% endif %}
+    </span>
+  </li>
+  {%- endfor %}
+</ol>
+  {%- if include.more %}
+<p class="pub-list__more"><a href="{{ base_path }}/publications/">{% if include.lang == 'ja' %}国内会議を含む全業績一覧 &rarr;{% else %}Full list of publications, including domestic conferences &rarr;{% endif %}</a></p>
+  {%- endif -%}
+{%- endif -%}

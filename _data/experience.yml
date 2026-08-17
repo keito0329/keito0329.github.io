@@ -1,26 +1,20 @@
-# Entries shown in the "Experience" section of the front page.
+# Positions shown in the "Experience" section of the front page and the CV.
+# Degrees go in _data/education.yml instead.
 #
-# These are listed in the order written here, so keep the most recent first.
+# Listed in the order written here, so keep the most recent first.
 #
 #   period  : free text, e.g. "2026.04 - present"
-#   role_en : position, shown on /
-#   role_ja : position, shown on /ja/ (optional; falls back to role_en)
-#   org_en  : organisation, shown on /
-#   org_ja  : organisation, shown on /ja/ (optional; falls back to org_en)
+#   role_en : position, shown on /   and /cv/
+#   role_ja : position, shown on /ja/ (falls back to role_en)
+#   org_en  : organisation, shown on /   and /cv/
+#   org_ja  : organisation, shown on /ja/ (falls back to org_en)
+#   note_en : optional second line
+#   note_ja : optional second line for /ja/ (falls back to note_en)
 #   url     : optional link on the organisation name
 
 - period: "2026.04 - present"
-  role_en: "Master's student"
-  role_ja: "修士課程"
-  org_en: "Media Dynamics Laboratory, Graduate School of Information Science and Technology, Hokkaido University"
-  org_ja: "北海道大学 大学院情報科学院 メディアダイナミクス研究室"
+  role_en: "Research Assistant"
+  role_ja: "リサーチアシスタント"
+  org_en: "Media Dynamics Laboratory, Hokkaido University"
+  org_ja: "北海道大学 メディアダイナミクス研究室"
   url: "https://www-lmd.ist.hokudai.ac.jp/"
-
-# TODO: the start year below is inferred from the School of Engineering Dean's
-# Award you received in March 2026. Correct it if you entered in another year,
-# and add the department name if you want it shown.
-- period: "2022.04 - 2026.03"
-  role_en: "B.Eng."
-  role_ja: "学士課程"
-  org_en: "School of Engineering, Hokkaido University"
-  org_ja: "北海道大学 工学部"

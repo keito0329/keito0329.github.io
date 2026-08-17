@@ -25,7 +25,7 @@ author:
   # Biographic information
   # `name_ja` and `employer_ja` are extra fields used by the Japanese front
   # page (_pages/ja.md); both fall back to the English values when left blank.
-  avatar           : "profile.png"   # TODO: replace images/profile.png with your own photo
+  avatar           : "profile.jpg"
   name             : "Keito Kozaki"
   name_ja          : "神崎 恵土"
   pronouns         : # example: "she/her"

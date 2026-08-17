@@ -1,0 +1,23 @@
+{% comment %}
+  Renders _data/news.yml, newest first.
+
+  Parameters:
+    lang - "ja" to use the `ja` field of each entry, anything else uses `en`.
+
+  Usage: {% include home/news-feed.html lang="ja" %}
+{% endcomment %}
+
+{%- assign news_items = site.data.news | sort: 'date' | reverse -%}
+<div class="news-feed">
+  {%- for item in news_items -%}
+    {%- if include.lang == 'ja' -%}
+      {%- assign body = item.ja | default: item.en -%}
+    {%- else -%}
+      {%- assign body = item.en -%}
+    {%- endif %}
+  <div class="news-feed__item">
+    <div class="news-feed__date">{{ item.date | date: "%Y.%m" }}</div>
+    <div class="news-feed__body">{{ body | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+  </div>
+  {%- endfor %}
+</div>

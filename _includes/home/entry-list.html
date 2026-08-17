@@ -1,0 +1,34 @@
+{% comment %}
+  Renders a period / role / organisation list. Used for both
+  _data/education.yml and _data/experience.yml, which share their field names.
+
+  Parameters:
+    entries - the data array to render, in the order written in the file.
+    lang    - "ja" to use the `*_ja` fields, anything else uses the `*_en` ones.
+
+  Usage: {% include home/entry-list.html entries=site.data.education lang="ja" %}
+{% endcomment %}
+
+<ul class="exp-list">
+  {%- for entry in include.entries -%}
+    {%- if include.lang == 'ja' -%}
+      {%- assign role = entry.role_ja | default: entry.role_en -%}
+      {%- assign org = entry.org_ja | default: entry.org_en -%}
+      {%- assign note = entry.note_ja | default: entry.note_en -%}
+    {%- else -%}
+      {%- assign role = entry.role_en -%}
+      {%- assign org = entry.org_en -%}
+      {%- assign note = entry.note_en -%}
+    {%- endif %}
+  <li class="exp-list__item">
+    <div class="exp-list__period">{{ entry.period }}</div>
+    <div class="exp-list__body">
+      <div>{{ role }}</div>
+      <div class="exp-list__org">{% if entry.url %}<a href="{{ entry.url }}">{{ org }}</a>{% else %}{{ org }}{% endif %}</div>
+      {%- if note %}
+      <div class="exp-list__note">{{ note }}</div>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

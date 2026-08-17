@@ -2,63 +2,46 @@
 layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<!-- Every section below is rendered from the files in _data/ and the
+     _publications collection, the same sources the front page uses, so the CV
+     never falls out of step with it. Sections that only belong on the CV, such
+     as scholarships, read their own data file. -->
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+<div class="home-section" id="education">
+  <h2 class="home-section__title">Education</h2>
+  {% include home/entry-list.html entries=site.data.education %}
+</div>
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<div class="home-section" id="experience">
+  <h2 class="home-section__title">Experience</h2>
+  {% include home/entry-list.html entries=site.data.experience %}
+</div>
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+<div class="home-section" id="awards">
+  <h2 class="home-section__title">Awards</h2>
+  {% include home/award-list.html %}
+</div>
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<div class="home-section" id="scholarships">
+  <h2 class="home-section__title">Scholarships and Fellowships</h2>
+  <ul class="award-list award-list--period">
+    {%- for grant in site.data.grants %}
+    <li class="award-list__item">
+      <div class="award-list__date">{{ grant.period }}</div>
+      <div class="award-list__body">{{ grant.en }}</div>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+
+<div class="home-section" id="publications">
+  <h2 class="home-section__title">Publications</h2>
+  {% include home/publication-list.html domestic=true %}
+</div>

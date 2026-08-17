@@ -22,10 +22,13 @@
   width: 180px;
   max-width: 40%;
 
+  /* Crop to a square so a portrait of any aspect ratio stays a circle
+     rather than being stretched into an ellipse. */
   img {
     display: block;
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
   }
 }
@@ -60,7 +63,8 @@
 }
 
 /*
-   Section headings shared by News / Publications / Experience.
+   Section headings shared by the News / Publications / Awards / Education /
+   Experience blocks on the front page and on the CV.
    ========================================================================== */
 
 .home-section {
@@ -195,6 +199,11 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Wider first column for lists showing a period rather than a single date. */
+.award-list--period .award-list__date {
+  flex: 0 0 10em;
+}
+
 .award-list__body {
   flex: 1 1 16em;
 }
@@ -232,8 +241,13 @@
   flex: 1 1 16em;
 }
 
-.exp-list__org {
+.exp-list__org,
+.exp-list__note {
   color: var(--global-text-color-light);
+}
+
+.exp-list__note {
+  font-size: 0.9em;
 }
 
 /*

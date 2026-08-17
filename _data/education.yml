@@ -1,0 +1,35 @@
+# Degrees shown in the "Education" section of the front page and the CV.
+#
+# Listed in the order written here, so keep the most recent first.
+# Shares its field names with _data/experience.yml, so both are rendered by
+# _includes/home/entry-list.html.
+#
+#   period  : free text, e.g. "2026.04 - present"
+#   role_en : degree or programme, shown on /   and /cv/
+#   role_ja : degree or programme, shown on /ja/ (falls back to role_en)
+#   org_en  : institution, shown on /   and /cv/
+#   org_ja  : institution, shown on /ja/ (falls back to org_en)
+#   note_en : optional second line, e.g. the laboratory
+#   note_ja : optional second line for /ja/ (falls back to note_en)
+#   url     : optional link on the institution name
+
+- period: "2026.04 - present"
+  role_en: "Master's programme in Information Science and Technology"
+  role_ja: "修士課程"
+  org_en: "Graduate School of Information Science and Technology, Hokkaido University"
+  org_ja: "北海道大学 大学院情報科学院"
+  note_en: "Media Dynamics Laboratory"
+  note_ja: "メディアダイナミクス研究室"
+  url: "https://www-lmd.ist.hokudai.ac.jp/"
+
+# TODO: the start year below is inferred from the School of Engineering Dean's
+# Award you received in March 2026. Correct it if you entered in another year,
+# and add your department if you want it shown.
+- period: "2022.04 - 2026.03"
+  role_en: "B.Eng."
+  role_ja: "学士課程"
+  org_en: "School of Engineering, Hokkaido University"
+  org_ja: "北海道大学 工学部"
+  note_en: "Media Dynamics Laboratory"
+  note_ja: "メディアダイナミクス研究室"
+  url: "https://www-lmd.ist.hokudai.ac.jp/"

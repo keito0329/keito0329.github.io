@@ -1,0 +1,23 @@
+{% comment %}
+  Renders _data/awards.yml, newest first.
+
+  Parameters:
+    lang - "ja" to use the `ja` field of each entry, anything else uses `en`.
+
+  Usage: {% include home/award-list.html lang="ja" %}
+{% endcomment %}
+
+{%- assign awards = site.data.awards | sort: 'date' | reverse -%}
+<ul class="award-list">
+  {%- for award in awards -%}
+    {%- if include.lang == 'ja' -%}
+      {%- assign body = award.ja | default: award.en -%}
+    {%- else -%}
+      {%- assign body = award.en -%}
+    {%- endif %}
+  <li class="award-list__item">
+    <div class="award-list__date">{{ award.date | date: "%Y.%m" }}</div>
+    <div class="award-list__body">{{ body }}</div>
+  </li>
+  {%- endfor %}
+</ul>

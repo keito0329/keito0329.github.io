@@ -10,7 +10,8 @@ redirect_from:
 
 <!-- Intro: the portrait, name, affiliation and contact links.
      Everything here is read from the `author:` block in _config.yml, so edit
-     that file rather than this markup. -->
+     that file rather than this markup. The sections below are rendered by the
+     includes in _includes/home/, which read the files in _data/. -->
 
 <div class="home-intro">
   <div class="home-intro__photo">
@@ -40,75 +41,25 @@ people.
 
 <div class="home-section" id="news">
   <h2 class="home-section__title">News<span class="home-section__hint">scroll &darr;</span></h2>
-  <div class="news-feed">
-    {%- assign news_items = site.data.news | sort: 'date' | reverse -%}
-    {%- for item in news_items %}
-    <div class="news-feed__item">
-      <div class="news-feed__date">{{ item.date | date: "%Y.%m" }}</div>
-      <div class="news-feed__body">{{ item.en | markdownify | remove: '<p>' | remove: '</p>' }}</div>
-    </div>
-    {%- endfor %}
-  </div>
+  {% include home/news-feed.html %}
 </div>
-
-<!-- Publications: international conference and journal papers, newest first.
-     Domestic conference papers are left to the full Publications page so this
-     English list stays readable. -->
 
 <div class="home-section" id="publications">
   <h2 class="home-section__title">Publications</h2>
-  {%- assign publications = site.publications | where_exp: "item", "item.category != 'domestic'" | sort: 'date' | reverse -%}
-  {%- if publications.size == 0 %}
-  <p>Add one Markdown file per paper under <code>_publications/</code> and it will
-  appear here as well as on the <a href="{{ base_path }}/publications/">Publications</a> page.</p>
-  {%- else %}
-  <ol class="pub-list">
-    {%- for publication in publications %}
-    <li>
-      <span class="pub-list__title">{{ publication.title }}</span>
-      {%- if publication.award %}<span class="pub-list__award">{{ publication.award }}</span>{% endif %}
-      {%- if publication.authors %}<span class="pub-list__authors">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}
-      <span class="pub-list__venue">{{ publication.venue }}{% if publication.date %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
-      <span class="pub-list__links">
-        <a href="{{ publication.url | prepend: base_path }}">details</a>
-        {%- if publication.paperurl %}<a href="{{ publication.paperurl }}">paper</a>{% endif %}
-        {%- if publication.codeurl %}<a href="{{ publication.codeurl }}">code</a>{% endif %}
-        {%- if publication.slidesurl %}<a href="{{ publication.slidesurl }}">slides</a>{% endif %}
-        {%- if publication.bibtexurl %}<a href="{{ publication.bibtexurl }}">bibtex</a>{% endif %}
-      </span>
-    </li>
-    {%- endfor %}
-  </ol>
-  <p class="pub-list__more"><a href="{{ base_path }}/publications/">Full list of publications, including domestic conferences &rarr;</a></p>
-  {%- endif %}
+  {% include home/publication-list.html more=true %}
 </div>
 
 <div class="home-section" id="awards">
   <h2 class="home-section__title">Awards</h2>
-  <ul class="award-list">
-    {%- assign awards = site.data.awards | sort: 'date' | reverse -%}
-    {%- for award in awards %}
-    <li class="award-list__item">
-      <div class="award-list__date">{{ award.date | date: "%Y.%m" }}</div>
-      <div class="award-list__body">{{ award.en }}</div>
-    </li>
-    {%- endfor %}
-  </ul>
+  {% include home/award-list.html %}
+</div>
+
+<div class="home-section" id="education">
+  <h2 class="home-section__title">Education</h2>
+  {% include home/entry-list.html entries=site.data.education %}
 </div>
 
 <div class="home-section" id="experience">
   <h2 class="home-section__title">Experience</h2>
-  <ul class="exp-list">
-    {%- for entry in site.data.experience %}
-    <li class="exp-list__item">
-      <div class="exp-list__period">{{ entry.period }}</div>
-      <div class="exp-list__body">
-        <div>{{ entry.role_en }}</div>
-        <div class="exp-list__org">
-          {%- if entry.url %}<a href="{{ entry.url }}">{{ entry.org_en }}</a>{% else %}{{ entry.org_en }}{% endif %}
-        </div>
-      </div>
-    </li>
-    {%- endfor %}
-  </ul>
+  {% include home/entry-list.html entries=site.data.experience %}
 </div>
