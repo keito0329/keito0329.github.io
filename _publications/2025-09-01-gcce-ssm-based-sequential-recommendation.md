@@ -4,7 +4,6 @@ collection: publications
 category: conferences
 # `date` is only used for ordering; the pages display the year alone.
 date: 2025-09-01
-venue_short: "GCCE 2025"
 venue: "IEEE Global Conference on Consumer Electronics (GCCE)"
 pages: "1271-1274"
 award: "Excellent Paper Award, Silver Prize"
