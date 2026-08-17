@@ -142,6 +142,15 @@
   display: block;
 }
 
+/* The `authors` field of each file in _publications/ wraps the site owner's
+   own name in **bold** when the paper is lead-authored. Render that as an
+   underline, the usual convention, rather than as bold text. */
+.pub-list__authors strong {
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .pub-list__venue {
   color: var(--global-text-color-light);
 }

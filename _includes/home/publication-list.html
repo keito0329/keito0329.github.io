@@ -1,6 +1,10 @@
 {% comment %}
   Renders the _publications collection as a numbered list, newest first.
 
+  The `authors` field of a publication is Markdown. Wrap your own name in
+  **bold** on lead-authored papers and it is rendered underlined; leave it
+  plain on papers where someone else is the lead author.
+
   Parameters:
     lang     - "ja" to label the links in Japanese, anything else uses English.
     domestic - true to include papers in the "domestic" category. When false
