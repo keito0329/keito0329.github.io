@@ -143,12 +143,29 @@
 }
 
 /* The `authors` field of each file in _publications/ wraps the site owner's
-   own name in **bold** when the paper is lead-authored. Render that as an
-   underline, the usual convention, rather than as bold text. */
+   own name in **bold** when the paper is lead-authored. Underline it as well,
+   the usual convention for a lead-authored paper. Drop the font-weight line
+   to mark it with the underline alone. */
 .pub-list__authors strong {
-  font-weight: inherit;
+  font-weight: bold;
   text-decoration: underline;
   text-underline-offset: 0.15em;
+}
+
+/* Venue badge, from the `venue_short` field. Outlined rather than filled so it
+   stays legible whichever theme is active, since the accent colour is a
+   mid-tone in both. */
+.pub-list__badge {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.05em 0.5em;
+  border: 1px solid var(--global-dark-border-color);
+  border-radius: $border-radius;
+  color: var(--global-text-color);
+  font-size: 0.8em;
+  font-weight: bold;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .pub-list__venue {

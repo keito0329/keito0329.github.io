@@ -4,6 +4,7 @@ collection: publications
 category: domestic
 # `date` is only used for ordering; the pages display the year alone.
 date: 2025-11-01
+venue_short: "北海道支部連合大会 2025"
 venue: "令和7年度 電気・情報関係学会北海道支部連合大会"
 pages: "37-38"
 award: "若手優秀論文発表賞"

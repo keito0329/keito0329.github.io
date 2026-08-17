@@ -4,6 +4,7 @@ collection: publications
 category: conferences
 # `date` is only used for ordering; the pages display the year alone.
 date: 2026-09-01
+venue_short: "RecSys 2026"
 venue: "ACM Conference on Recommender Systems (RecSys)"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"
 citation: 'Keito Kozaki, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama. (2026). &quot;Explaining Last-Item Reliance in Causal Self-Attention for Sequential Recommendation via Residual Dominance.&quot; <i>Proceedings of the ACM Conference on Recommender Systems (RecSys)</i>.'

@@ -4,6 +4,7 @@ collection: publications
 category: domestic
 # `date` is only used for ordering; the pages display the year alone.
 date: 2026-03-01
+venue_short: "DEIM 2026"
 venue: "第18回データ工学と情報マネジメントに関するフォーラム (DEIM2026)"
 award: "学生プレゼンテーション賞"
 authors: "**神崎恵土**, 櫻井慶悟, 藤後廉, 小川貴弘, 長谷山美紀"
