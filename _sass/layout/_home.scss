@@ -152,35 +152,39 @@
   text-underline-offset: 0.15em;
 }
 
-/* Venue badge, from the `venue_short` field. Outlined rather than filled so it
-   stays legible whichever theme is active, since the accent colour is a
-   mid-tone in both. */
-.pub-list__badge {
+/* The venue badge (from `venue_short`) and the award badge are both filled
+   chips with white text. The theme accent is a mid-tone in both the light and
+   dark palettes and does not carry white text at this size, so it is darkened
+   with color-mix(); browsers without it fall back to the plain accent colour.
+   Awards get their own hue so the two chips stay distinguishable. */
+
+$award-badge-color: #8a5a00;
+
+.pub-list__badge,
+.pub-list__award {
   display: inline-block;
-  margin-right: 0.5em;
   padding: 0.05em 0.5em;
-  border: 1px solid var(--global-dark-border-color);
   border-radius: $border-radius;
-  color: var(--global-text-color);
+  color: #fff;
   font-size: 0.8em;
   font-weight: bold;
   white-space: nowrap;
   vertical-align: middle;
 }
 
-.pub-list__venue {
-  color: var(--global-text-color-light);
+.pub-list__badge {
+  margin-right: 0.5em;
+  background-color: var(--global-base-color);
+  background-color: color-mix(in srgb, var(--global-base-color) 80%, #000);
 }
 
 .pub-list__award {
-  display: inline-block;
   margin-left: 0.4em;
-  padding: 0.05em 0.5em;
-  border-radius: $border-radius;
-  background-color: var(--global-base-color);
-  color: #fff;
-  font-size: 0.75em;
-  vertical-align: middle;
+  background-color: $award-badge-color;
+}
+
+.pub-list__venue {
+  color: var(--global-text-color-light);
 }
 
 .pub-list__links {
