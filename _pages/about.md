@@ -36,8 +36,8 @@ redirect_from:
   </div>
 </div>
 
-I am a master's student at the Media Dynamics Laboratory, Graduate School of
-Information Science and Technology, Hokkaido University. My research is on
+I am a first-year master's student at the Media Dynamics Laboratory, Graduate
+School of Information Science and Technology, Hokkaido University. My research is on
 recommender systems, and I am particularly interested in interpreting what
 happens inside the models and what the benchmark datasets actually measure.
 More recently I have also become interested in digital twins that imitate
