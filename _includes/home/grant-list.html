@@ -16,7 +16,7 @@
     {%- endif %}
   <li class="award-list__item">
     <div class="award-list__date">{{ grant.period }}</div>
-    <div class="award-list__body">{{ body }}</div>
+    <div class="award-list__body">{% if grant.url %}<a href="{{ grant.url }}">{{ body }}</a>{% else %}{{ body }}{% endif %}</div>
   </li>
   {%- endfor %}
 </ul>

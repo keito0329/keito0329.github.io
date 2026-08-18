@@ -3,9 +3,11 @@
 # Listed in the order written here, so keep the most recent first.
 #
 #   period : free text, e.g. "2026.04 - present"
-#   en     : name shown on /cv/
+#   en     : name shown on / and /cv/
 #   ja     : name shown on /ja/ (falls back to `en`)
+#   url    : optional link on the name
 
 - period: "2026.04 - present"
   en: "TCS Scholarship"
   ja: "TCS奨学金"
+  url: "https://tcs-foundation.or.jp/"
