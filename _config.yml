@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Keito Kozaki"
 title_separator          : "-"
 name                     : &name "Keito Kozaki"
-description              : &description "Keito Kozaki - recommender systems and the interpretation of model internals and datasets, Media Dynamics Laboratory, Hokkaido University"
+description              : &description "Keito Kozaki (神崎恵土) - recommender systems and the interpretation of model internals and datasets, Media Dynamics Laboratory, Hokkaido University"
 url                      : https://keito0329.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                        # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -156,10 +156,21 @@ og_image                 :  # Social media default site image
 og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
+# This drives the JSON-LD block in _includes/seo.html. `alternate_name` lists
+# the other spellings of the name, and `links` lists profiles elsewhere; both
+# are how a search engine learns that these identities are one person.
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : "Person" # Person or Organization (defaults to Person)
+  name                   : "Keito Kozaki" # If the user or organization name differs from the site's name
+  alternate_name:
+    - "神崎恵土"
+    - "神崎 恵土"
+    - "Kozaki Keito"
+  links:
+    - "https://orcid.org/0009-0004-5149-1249"
+    - "https://x.com/Keito_Kozaki"
+    - "https://www.linkedin.com/in/keito-kozaki-b0962a3ba/"
+    - "https://github.com/keito0329"
 
 
 # Analytics

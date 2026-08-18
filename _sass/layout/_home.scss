@@ -43,6 +43,14 @@
   line-height: 1.2;
 }
 
+/* The other spelling of the name, shown under the heading so both are on both
+   language versions of the page. */
+.home-intro__alt-name {
+  margin: 0 0 0.35em;
+  font-size: 1.1em;
+  color: var(--global-text-color-light);
+}
+
 .home-intro__affiliation {
   margin: 0 0 0.75em;
   color: var(--global-text-color-light);

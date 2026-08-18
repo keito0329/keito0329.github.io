@@ -1,5 +1,8 @@
 ---
 permalink: /
+lang: en
+seo_title: "Keito Kozaki (神崎恵土)"
+description: "Keito Kozaki (神崎恵土), master's student at the Media Dynamics Laboratory, Hokkaido University. Recommender systems, and interpreting model internals and datasets."
 author_profile: false
 redirect_from:
   - /about/
@@ -19,6 +22,7 @@ redirect_from:
   </div>
   <div class="home-intro__body">
     <h1 class="home-intro__name">{{ site.author.name }}</h1>
+    {% if site.author.name_ja %}<p class="home-intro__alt-name" lang="ja">{{ site.author.name_ja }}</p>{% endif %}
     <p class="home-intro__affiliation">{{ site.author.employer }}</p>
     <ul class="home-intro__links">
       {% if site.author.email %}<li><a href="mailto:{{ site.author.email }}">Email</a></li>{% endif %}
