@@ -191,6 +191,22 @@ $award-badge-color: #8a5a00;
   background-color: $award-badge-color;
 }
 
+/* The CORE rank sits beside the venue badge. It is outlined rather than filled
+   so that it reads as a qualifier of the venue rather than a third label
+   competing with it. */
+.pub-list__rank {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.05em 0.5em;
+  border: 1px solid var(--global-dark-border-color);
+  border-radius: $border-radius;
+  color: var(--global-text-color);
+  font-size: 0.8em;
+  font-weight: bold;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
 .pub-list__venue {
   color: var(--global-text-color-light);
 }

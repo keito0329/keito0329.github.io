@@ -5,6 +5,7 @@ category: conferences
 # `date` is only used for ordering; the pages display the year alone.
 date: 2026-07-01
 venue_short: "SIGIR 2026"
+core_rank: "A*"   # CORE2023
 venue: "International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
 pages: "3894-3899"
 paperurl: "https://dl.acm.org/doi/epdf/10.1145/3805712.3809967"

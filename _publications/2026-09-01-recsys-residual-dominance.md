@@ -5,6 +5,7 @@ category: conferences
 # `date` is only used for ordering; the pages display the year alone.
 date: 2026-09-01
 venue_short: "RecSys 2026"
+core_rank: "A"    # CORE2023
 venue: "ACM Conference on Recommender Systems (RecSys)"
 paperurl: "https://arxiv.org/pdf/2608.14021"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"

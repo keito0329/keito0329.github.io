@@ -8,7 +8,9 @@
 
   The optional `venue_short` field is shown as a badge before the title, for
   example "SIGIR 2026". Leave it out and no badge appears, which is a way to
-  highlight only the venues worth calling out.
+  highlight only the venues worth calling out. The optional `core_rank` field
+  is shown next to it as "CORE A*"; record which edition of the ranking it
+  comes from in a comment beside the field.
 
   Parameters:
     publication - one entry of the _publications collection.
@@ -22,6 +24,7 @@
 {%- assign publication = include.publication %}
 <li>
   {%- if publication.venue_short %}<span class="pub-list__badge">{{ publication.venue_short }}</span>{% endif %}
+  {%- if publication.core_rank %}<span class="pub-list__rank">CORE {{ publication.core_rank }}</span>{% endif %}
   <span class="pub-list__title">{{ publication.title }}</span>
   {%- if publication.award %}<span class="pub-list__award">{{ publication.award }}</span>{% endif %}
   {%- if publication.authors %}<span class="pub-list__authors">{{ publication.authors | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% endif %}
