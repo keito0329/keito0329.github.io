@@ -19,15 +19,12 @@
   org_ja: "北海道大学 メディアダイナミクス研究室"
   url: "https://www-lmd.ist.hokudai.ac.jp/"
 
-# TODO: two things to check here.
-#   - `period`: set to the year only. Narrow it to the term if you want, e.g.
-#     "2026.04 - 2026.08".
-#   - `note_en`: these are plain translations of the course titles. Replace them
-#     with the official English names if the courses have them.
+# TODO: `period` is set to the year only. Narrow it to the term if you want,
+# e.g. "2026.04 - 2026.08".
 - period: "2026"
   role_en: "Teaching Assistant"
   role_ja: "ティーチングアシスタント"
   org_en: "School of Engineering, Hokkaido University"
   org_ja: "北海道大学 工学部"
-  note_en: "Media Network Exercises II, Media Network Experiments IA"
+  note_en: "Exercise in Media Network Ⅱ, Media Network Laboratory ⅠA"
   note_ja: "メディアネットワーク演習Ⅱ、メディアネットワーク実験ⅠA"
