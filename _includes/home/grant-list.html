@@ -1,0 +1,22 @@
+{% comment %}
+  Renders _data/grants.yml, in the order written in that file.
+
+  Parameters:
+    lang - "ja" to use the `ja` field of each entry, anything else uses `en`.
+
+  Usage: {% include home/grant-list.html lang="ja" %}
+{% endcomment %}
+
+<ul class="award-list award-list--period">
+  {%- for grant in site.data.grants -%}
+    {%- if include.lang == 'ja' -%}
+      {%- assign body = grant.ja | default: grant.en -%}
+    {%- else -%}
+      {%- assign body = grant.en -%}
+    {%- endif %}
+  <li class="award-list__item">
+    <div class="award-list__date">{{ grant.period }}</div>
+    <div class="award-list__body">{{ body }}</div>
+  </li>
+  {%- endfor %}
+</ul>

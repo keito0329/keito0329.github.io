@@ -31,14 +31,7 @@ redirect_from:
 
 <div class="home-section" id="scholarships">
   <h2 class="home-section__title">Scholarships and Fellowships</h2>
-  <ul class="award-list award-list--period">
-    {%- for grant in site.data.grants %}
-    <li class="award-list__item">
-      <div class="award-list__date">{{ grant.period }}</div>
-      <div class="award-list__body">{{ grant.en }}</div>
-    </li>
-    {%- endfor %}
-  </ul>
+  {% include home/grant-list.html %}
 </div>
 
 <div class="home-section" id="publications">

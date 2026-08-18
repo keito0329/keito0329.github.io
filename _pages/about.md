@@ -54,6 +54,11 @@ people.
   {% include home/award-list.html %}
 </div>
 
+<div class="home-section" id="scholarships">
+  <h2 class="home-section__title">Scholarships and Fellowships</h2>
+  {% include home/grant-list.html %}
+</div>
+
 <div class="home-section" id="education">
   <h2 class="home-section__title">Education</h2>
   {% include home/entry-list.html entries=site.data.education %}

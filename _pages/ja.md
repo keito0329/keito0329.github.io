@@ -48,6 +48,11 @@ author_profile: false
   {% include home/award-list.html lang="ja" %}
 </div>
 
+<div class="home-section" id="scholarships">
+  <h2 class="home-section__title">奨学金</h2>
+  {% include home/grant-list.html lang="ja" %}
+</div>
+
 <div class="home-section" id="education">
   <h2 class="home-section__title">学歴</h2>
   {% include home/entry-list.html entries=site.data.education lang="ja" %}
