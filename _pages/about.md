@@ -53,6 +53,11 @@ people.
   {% include home/publication-list.html more=true %}
 </div>
 
+<div class="home-section" id="media">
+  <h2 class="home-section__title">Media Coverage</h2>
+  {% include home/media-list.html %}
+</div>
+
 <div class="home-section" id="awards">
   <h2 class="home-section__title">Awards</h2>
   {% include home/award-list.html %}

@@ -1,0 +1,23 @@
+{% comment %}
+  Renders _data/media.yml, newest first.
+
+  Parameters:
+    lang - "ja" to use the `ja` field of each entry, anything else uses `en`.
+
+  Usage: {% include home/media-list.html lang="ja" %}
+{% endcomment %}
+
+{%- assign articles = site.data.media | sort: 'date' | reverse -%}
+<ul class="award-list">
+  {%- for article in articles -%}
+    {%- if include.lang == 'ja' -%}
+      {%- assign body = article.ja | default: article.en -%}
+    {%- else -%}
+      {%- assign body = article.en -%}
+    {%- endif %}
+  <li class="award-list__item">
+    <div class="award-list__date">{{ article.date | date: "%Y.%m" }}</div>
+    <div class="award-list__body">{{ body | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+  </li>
+  {%- endfor %}
+</ul>

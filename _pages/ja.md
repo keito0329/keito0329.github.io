@@ -47,6 +47,11 @@ author_profile: false
   {% include home/publication-list.html lang="ja" domestic=true %}
 </div>
 
+<div class="home-section" id="media">
+  <h2 class="home-section__title">紹介記事</h2>
+  {% include home/media-list.html lang="ja" %}
+</div>
+
 <div class="home-section" id="awards">
   <h2 class="home-section__title">受賞</h2>
   {% include home/award-list.html lang="ja" %}

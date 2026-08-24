@@ -1,0 +1,13 @@
+# Coverage of the research elsewhere, shown in the "Media Coverage" section of
+# the front page.
+#
+# Sorted by `date` automatically, newest first, so new entries can be appended
+# anywhere in this file.
+#
+#   date : ISO date of the article, displayed as YYYY.MM
+#   en   : text shown on /    (Markdown links are allowed)
+#   ja   : text shown on /ja/ (optional; falls back to `en`)
+
+- date: "2026-08-21"
+  en: "The RecSys 2026 paper on residual dominance was covered in [Top Information Retrieval Papers of the Week](https://recsys.substack.com/p/do-latent-reasoning-steps-actually)."
+  ja: "残差支配に関する RecSys 2026 の論文が [Top Information Retrieval Papers of the Week](https://recsys.substack.com/p/do-latent-reasoning-steps-actually) で紹介されました。"
