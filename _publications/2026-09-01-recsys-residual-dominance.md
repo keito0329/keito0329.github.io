@@ -1,5 +1,5 @@
 ---
-title: "Explaining Last-Item Reliance in Causal Self-Attention for Sequential Recommendation via Residual Dominance"
+title: "Residual Dominance as a Structural Account of Last-Item Reliance in Causal Self-Attention Recommenders"
 collection: publications
 category: conferences
 # `date` is only used for ordering; the pages display the year alone.
@@ -9,7 +9,7 @@ core_rank: "A"    # CORE2023
 venue: "ACM Conference on Recommender Systems (RecSys)"
 paperurl: "https://arxiv.org/pdf/2608.14021"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"
-citation: 'Keito Kozaki, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama. (2026). &quot;Explaining Last-Item Reliance in Causal Self-Attention for Sequential Recommendation via Residual Dominance.&quot; <i>Proceedings of the ACM Conference on Recommender Systems (RecSys)</i>.'
+citation: 'Keito Kozaki, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama. (2026). &quot;Residual Dominance as a Structural Account of Last-Item Reliance in Causal Self-Attention Recommenders.&quot; <i>Proceedings of the ACM Conference on Recommender Systems (RecSys)</i>.'
 ---
 
 <!--
