@@ -9,15 +9,36 @@
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
+            {% if page.lang == 'ja' %}
+              {% assign link_title = link.title_ja | default: link.title %}
+              {% assign link_url = link.url_ja | default: link.url %}
+            {% else %}
+              {% assign link_title = link.title %}
+              {% assign link_url = link.url %}
+            {% endif %}
+            {% if link_url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            <li class="masthead__menu-item {% if page.url contains link_url and link_url != '/' %}selected{% endif %}">
+              <a href="{{ domain }}{{ link_url }}">{{ link_title }}</a>
             </li>
           {% endfor %}
+          {% comment %}
+            The language switch is marked `persist` so the greedy navigation
+            never folds it into the overflow menu: on a phone almost everything
+            else collapses, and a reader who cannot see that a Japanese version
+            exists will not go looking for it behind the button. It sits outside
+            the loop above because its label and target depend on the page.
+          {% endcomment %}
+          <li class="masthead__menu-item persist">
+            {% if page.lang == 'ja' %}
+              <a href="{{ base_path }}/" hreflang="en">English</a>
+            {% else %}
+              <a href="{{ base_path }}/ja/" hreflang="ja">日本語</a>
+            {% endif %}
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>

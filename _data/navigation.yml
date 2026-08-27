@@ -10,21 +10,34 @@
 # with the page URLs commented out at the bottom of this file and set
 # `author_profile: true` in _pages/about.md to bring the sidebar back.
 
+# `title_ja` and `url_ja` are used on pages that declare `lang: ja`, so that the
+# Japanese front page links to its own sections rather than the English ones.
+# Both fall back to `title` and `url` when omitted, so an entry that should read
+# the same in either language can simply leave them out.
+
 main:
   - title: "News"
+    title_ja: "お知らせ"
     url: /#news
+    url_ja: /ja/#news
 
   - title: "Publications"
+    title_ja: "業績"
     url: /#publications
+    url_ja: /ja/#publications
 
   - title: "Experience"
+    title_ja: "経歴"
     url: /#experience
+    url_ja: /ja/#experience
 
   - title: "CV"
     url: /cv/
 
-  - title: "日本語"
-    url: /ja/
+  # The language switch is not listed here. It lives in _includes/masthead.html
+  # so that it can flip between 日本語 and English depending on the page, and so
+  # that it stays visible on narrow screens instead of collapsing into the
+  # overflow menu.
 
   # The following pages exist in the repository but are not linked in the
   # header. Uncomment an entry to add it back to the navigation.

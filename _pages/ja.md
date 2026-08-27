@@ -28,7 +28,6 @@ author_profile: false
       {% if site.author.twitter %}<li><a href="https://x.com/{{ site.author.twitter }}">X</a></li>{% endif %}
       {% if site.author.linkedin %}<li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>{% endif %}
       <li><a href="{{ base_path }}/cv/">CV</a></li>
-      <li><a href="{{ base_path }}/">English</a></li>
     </ul>
   </div>
 </div>
