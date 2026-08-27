@@ -47,6 +47,11 @@
      adjust this one value to change the gap. */
   ruby {
     word-spacing: 0.2em;
+
+    /* Browsers default to space-around, which spreads the reading out to fill
+       the width of the kanji beneath it; at this ruby size that pulls the
+       characters of けいと noticeably apart. Centre it instead. */
+    ruby-align: center;
   }
 
   /* The reading is an aid, not part of the name, so it is set well below the
