@@ -25,9 +25,12 @@ author:
   # Biographic information
   # `name_ja` and `employer_ja` are extra fields used by the Japanese front
   # page (_pages/ja.md); both fall back to the English values when left blank.
+  # `name_kana` is set as ruby over `name_ja`, so the two must have the same
+  # number of space-separated parts for the reading to line up with the kanji.
   avatar           : "profile.jpg"
   name             : "Keito Kozaki"
   name_ja          : "神崎 恵土"
+  name_kana        : "こうざき けいと"
   pronouns         : # example: "she/her"
   bio              : "First-year master's student working on recommender systems, with an interest in interpreting model internals and datasets."
   location         : "Sapporo, Japan"

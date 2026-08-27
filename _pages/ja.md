@@ -19,7 +19,32 @@ author_profile: false
     <img src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name_ja | default: site.author.name }}" fetchpriority="high" />
   </div>
   <div class="home-intro__body">
-    <h1 class="home-intro__name">{{ site.author.name_ja | default: site.author.name }}</h1>
+    {%- comment %}
+      The reading is set as ruby over each part of the name separately, so that
+      こうざき sits over 神崎 and けいと over 恵土 rather than the whole reading
+      being centred over the whole name. The <rp> parentheses are the fallback
+      for anything that cannot render ruby. Without name_kana the name is
+      printed plain.
+    {% endcomment -%}
+    {%- assign name_parts = site.author.name_ja | default: site.author.name | split: " " -%}
+    {%- assign kana_parts = site.author.name_kana | split: " " -%}
+    <h1 class="home-intro__name">
+      {%- if site.author.name_kana -%}
+        <ruby>
+          {%- for part in name_parts -%}
+            {{ part }}<rp>（</rp><rt>{{ kana_parts[forloop.index0] }}</rt><rp>）</rp>
+            {%- comment %}
+              A literal space here would be stripped by the compress layout, and
+              a non-breaking space also keeps the surname and given name on the
+              same line.
+            {% endcomment -%}
+            {%- unless forloop.last %}&#160;{% endunless -%}
+          {%- endfor -%}
+        </ruby>
+      {%- else -%}
+        {{ site.author.name_ja | default: site.author.name }}
+      {%- endif -%}
+    </h1>
     <p class="home-intro__alt-name" lang="en">{{ site.author.name }}</p>
     <p class="home-intro__affiliation">{{ site.author.employer_ja | default: site.author.employer }}</p>
     <ul class="home-intro__links">

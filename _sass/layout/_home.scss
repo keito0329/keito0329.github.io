@@ -41,6 +41,15 @@
   margin: 0 0 0.15em;
   font-size: 1.75em;
   line-height: 1.2;
+
+  /* The reading is an aid, not part of the name, so it is set well below the
+     weight of the heading. The browser default is half the base size, which at
+     this heading size competes with the name itself. */
+  rt {
+    font-size: 0.4em;
+    font-weight: normal;
+    color: var(--global-text-color-light);
+  }
 }
 
 /* The other spelling of the name, shown under the heading so both are on both
