@@ -56,14 +56,16 @@
 {% endif %}
 
 {% comment %}
-  Pages that declare a `lang` are one of a translated pair, so point search
-  engines at both versions. Without this the two front pages compete with each
-  other rather than being understood as the same page in two languages.
+  A page that names its counterpart through `alternate_en` and `alternate_ja`
+  is one of a translated pair, so point search engines at both versions.
+  Without this the two versions compete with each other rather than being
+  understood as the same page in two languages. Each pair names its own URLs,
+  so the front pages and the CV do not get mixed up with one another.
 {% endcomment %}
-{% if seo_url and page.lang %}
-  <link rel="alternate" hreflang="en" href="{{ seo_url }}/">
-  <link rel="alternate" hreflang="ja" href="{{ seo_url }}/ja/">
-  <link rel="alternate" hreflang="x-default" href="{{ seo_url }}/">
+{% if seo_url and page.alternate_en and page.alternate_ja %}
+  <link rel="alternate" hreflang="en" href="{{ page.alternate_en | prepend: seo_url }}">
+  <link rel="alternate" hreflang="ja" href="{{ page.alternate_ja | prepend: seo_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ page.alternate_en | prepend: seo_url }}">
 {% endif %}
 
 {% if site.twitter.username %}

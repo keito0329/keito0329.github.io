@@ -34,9 +34,9 @@
           {% endcomment %}
           <li class="masthead__menu-item persist">
             {% if page.lang == 'ja' %}
-              <a href="{{ base_path }}/" hreflang="en">English</a>
+              <a href="{{ page.alternate_en | default: '/' | prepend: base_path }}" hreflang="en">English</a>
             {% else %}
-              <a href="{{ base_path }}/ja/" hreflang="ja">日本語</a>
+              <a href="{{ page.alternate_ja | default: '/ja/' | prepend: base_path }}" hreflang="ja">日本語</a>
             {% endif %}
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">

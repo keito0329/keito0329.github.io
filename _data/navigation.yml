@@ -33,6 +33,7 @@ main:
 
   - title: "CV"
     url: /cv/
+    url_ja: /ja/cv/
 
   # The language switch is not listed here. It lives in _includes/masthead.html
   # so that it can flip between 日本語 and English depending on the page, and so

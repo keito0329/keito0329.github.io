@@ -1,6 +1,8 @@
 ---
 permalink: /ja/
 lang: ja
+alternate_en: /
+alternate_ja: /ja/
 seo_title: "神崎恵土 (Keito Kozaki)"
 description: "神崎恵土 (Keito Kozaki)。北海道大学 メディアダイナミクス研究室 修士課程。推薦システム、特にモデル内部やデータセットの解釈に取り組んでいます。"
 author_profile: false
