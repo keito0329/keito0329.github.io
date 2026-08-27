@@ -69,6 +69,6 @@ author_profile: false
 </div>
 
 <div class="home-section" id="experience">
-  <h2 class="home-section__title">経歴</h2>
+  <h2 class="home-section__title">職歴</h2>
   {% include home/entry-list.html entries=site.data.experience lang="ja" %}
 </div>
