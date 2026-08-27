@@ -42,6 +42,13 @@
   font-size: 1.75em;
   line-height: 1.2;
 
+  /* Widens the gap between the surname and the given name. The separator in
+     the markup is a non-breaking space, which is a little tight on its own;
+     adjust this one value to change the gap. */
+  ruby {
+    word-spacing: 0.2em;
+  }
+
   /* The reading is an aid, not part of the name, so it is set well below the
      weight of the heading. The browser default is half the base size, which at
      this heading size competes with the name itself. */
