@@ -19,15 +19,12 @@
   org_ja: "北海道大学 メディアダイナミクス研究室"
   url: "https://www-lmd.ist.hokudai.ac.jp/"
 
-# TODO: two things to check here.
-#   - `org_en`: written as the plain reading of 株式会社Simulacra. Replace it
-#     with the company's own English name if it uses a different one.
-#   - `url`: add the company's site to link the name, as the laboratory is.
 - period: "2026.02 - present"
   role_en: "Applied Engineer (part-time)"
   role_ja: "Applied Engineer（パートタイム）"
   org_en: "Simulacra Inc."
   org_ja: "株式会社Simulacra"
+  url: "https://www.simulacra.co.jp/about/"
 
 # TODO: `period` is set to the year only. Narrow it to the term if you want,
 # e.g. "2026.04 - 2026.08".
