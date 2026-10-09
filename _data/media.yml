@@ -11,3 +11,9 @@
 - date: "2026-08-21"
   en: "The RecSys 2026 paper on residual dominance was covered in [Top Information Retrieval Papers of the Week](https://recsys.substack.com/p/do-latent-reasoning-steps-actually)."
   ja: "残差支配に関する RecSys 2026 の論文が [Top Information Retrieval Papers of the Week](https://recsys.substack.com/p/do-latent-reasoning-steps-actually) で紹介されました。"
+
+# TODO: swap in the English release if one is published at
+# https://www.global.hokudai.ac.jp/ ; this links the Japanese one for now.
+- date: "2026-10-09"
+  en: "Hokkaido University issued a [press release](https://www.hokudai.ac.jp/news/2026/10/ai-14.html) on the RecSys 2026 paper (in Japanese)."
+  ja: "RecSys 2026 の論文について、北海道大学から[プレスリリース](https://www.hokudai.ac.jp/news/2026/10/ai-14.html)が公開されました。"
