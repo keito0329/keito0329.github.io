@@ -193,6 +193,16 @@ include:
   - _pages
   - files
 exclude:
+  # Build and authoring sources: these belong in the repository, not on the
+  # published site, which was serving the CV LaTeX sources, the dev compose
+  # file and the template's helper notebooks.
+  - cv
+  - docker-compose.yaml
+  - markdown_generator
+  - scripts
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap_out.ipynb
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
