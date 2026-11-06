@@ -6,6 +6,9 @@
   The `authors` field is Markdown. A name wrapped in **bold** is rendered bold
   and underlined, marking a lead-authored paper.
 
+  `doiurl` is shown as [doi] and `paperurl` as [pdf], so a landing page and the
+  PDF itself can both be listed; a DOI page is not labelled as a PDF.
+
   The optional `venue_short` field is shown as a badge before the title, for
   example "SIGIR 2026". Leave it out and no badge appears, which is a way to
   highlight only the venues worth calling out. The optional `core_rank` field
@@ -31,6 +34,7 @@
   <span class="pub-list__venue">{{ publication.venue }}{% if publication.pages %}, pp. {{ publication.pages }}{% endif %}{% if publication.date %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
   <span class="pub-list__links">
     <a href="{{ publication.url | prepend: base_path }}">{% if include.lang == 'ja' %}詳細{% else %}details{% endif %}</a>
+    {%- if publication.doiurl %}<a href="{{ publication.doiurl }}">doi</a>{% endif %}
     {%- if publication.paperurl %}<a href="{{ publication.paperurl }}">pdf</a>{% endif %}
     {%- if publication.codeurl %}<a href="{{ publication.codeurl }}">{% if include.lang == 'ja' %}コード{% else %}code{% endif %}</a>{% endif %}
     {%- if publication.slidesurl %}<a href="{{ publication.slidesurl }}">{% if include.lang == 'ja' %}スライド{% else %}slides{% endif %}</a>{% endif %}

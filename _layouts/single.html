@@ -56,8 +56,9 @@ layout: default
           <p class="pub-list__authors">{{ page.authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
         {% endif %}
 
-        {% if page.paperurl or page.codeurl or page.slidesurl or page.bibtexurl %}
+        {% if page.doiurl or page.paperurl or page.codeurl or page.slidesurl or page.bibtexurl %}
           <p class="pub-list__links">
+            {%- if page.doiurl %}<a href="{{ page.doiurl }}">doi</a>{% endif %}
             {%- if page.paperurl %}<a href="{{ page.paperurl }}">pdf</a>{% endif %}
             {%- if page.codeurl %}<a href="{{ page.codeurl }}">code</a>{% endif %}
             {%- if page.slidesurl %}<a href="{{ page.slidesurl }}">slides</a>{% endif %}
