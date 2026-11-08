@@ -7,9 +7,8 @@ date: 2026-11-06
 venue_short: "CIKM 2026"
 core_rank: "A"    # CORE2023
 venue: "ACM International Conference on Information and Knowledge Management (CIKM)"
-# TODO: add `paperurl` with the PDF link once ACM publishes it; the entry then
-# shows [doi] and [pdf] side by side.
 doiurl: "https://doi.org/10.1145/3799682.3839990"
+paperurl: "https://dl.acm.org/doi/pdf/10.1145/3799682.3839990"
 authors: "**Keito Kozaki**, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama"
 citation: 'Keito Kozaki, Keigo Sakurai, Ren Togo, Takahiro Ogawa, Miki Haseyama. (2026). &quot;Diagnosing Lexical Text-Anchor Retrievability in Sequential Recommendation Benchmarks.&quot; <i>Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM)</i>.'
 ---
