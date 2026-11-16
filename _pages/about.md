@@ -45,6 +45,11 @@ happens inside the models and what the benchmark datasets actually measure.
 More recently I have also become interested in digital twins that imitate
 people.
 
+I am open to collaboration and always glad to talk about recommender systems.
+If anything here overlaps with what you are working on, feel free to
+[get in touch]({{ site.author.email | prepend: 'mailto:' }}).
+{: .home-intro__contact}
+
 <div class="home-section" id="news">
   <h2 class="home-section__title">News<span class="home-section__hint">scroll &darr;</span></h2>
   {% include home/news-feed.html %}

@@ -91,6 +91,14 @@
   }
 }
 
+/* The invitation to get in touch, set under the bio. The extra space above it
+   is what marks it as its own note rather than the tail of the bio, so it is
+   left as plain body text; a box or an accent colour would shout on a page
+   that is otherwise this plain. */
+.home-intro__contact {
+  margin-top: 1.5em;
+}
+
 /*
    Section headings shared by the News / Publications / Awards / Education /
    Experience blocks on the front page and on the CV.

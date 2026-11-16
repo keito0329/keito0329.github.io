@@ -59,9 +59,15 @@ author_profile: false
   </div>
 </div>
 
-北海道大学 大学院情報科学院 メディアダイナミクス研究室の修士1年です。
-推薦システム、特にモデル内部やデータセットの解釈に興味があります。
-また近年は人を模倣したデジタルツインの研究にも興味があります。
+<!-- Each Japanese paragraph is kept on one source line. A line break inside a
+     paragraph becomes a real space in the rendered text, which is invisible
+     between English words but shows up as a gap mid-sentence in Japanese, so
+     do not re-wrap these. -->
+
+北海道大学 大学院情報科学院 メディアダイナミクス研究室の修士1年です。推薦システム、特にモデル内部やデータセットの解釈に興味があります。また近年は人を模倣したデジタルツインの研究にも興味があります。
+
+共同研究やディスカッションのお誘いを歓迎しています。研究内容に関心を持っていただけましたら、お気軽に[メール]({{ site.author.email | prepend: 'mailto:' }})でご連絡ください。
+{: .home-intro__contact}
 
 <div class="home-section" id="news">
   <h2 class="home-section__title">お知らせ<span class="home-section__hint">scroll &darr;</span></h2>
